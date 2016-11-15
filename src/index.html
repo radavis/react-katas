@@ -1,45 +1,73 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple React Starter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.css">
     <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/vendor/progress/progress.css">
     <link rel="stylesheet" href="/vendor/todos/todo.css">
+    <style>
+      .row {
+        margin-top: 25px;
+      }
+    </style>
   </head>
   <body>
     <div id="container"></div>
 
+    <hr />
+
     <!-- Extract a component that takes an icon prop -->
-    <i class="fa fa-twitter"></i>
+    <div class="column row">
+      <i class="fa fa-twitter"></i>
+    </div>
 
     <!-- Extract a component that takes a value and a suit prop -->
-    <img src="/vendor/cards/2_of_clubs.svg" alt="2 of Clubs" />
+    <div class="column row">
+      <img src="/vendor/cards/2_of_clubs.svg" alt="2 of Clubs" />
+    </div>
 
     <!-- Extract a component that takes a progress prop -->
-    <div class="progress-bar">
-      <span class="progress" style="width: 70%">
-        70%
-      </span>
+    <div class="column row">
+      <div class="success progress">
+        <div class="progress-meter" style="width: 70%">
+          <p class="progress-meter-text">70%</p>
+        </div>
+      </div>
     </div>
 
     <!-- Extract a todo list item that takes a complete and title prop -->
-    <ul>
-      <li class="complete">Learn ES2015</li>
-      <li class="complete">Learn about Components</li>
-      <li>Learn about state</li>
-    </ul>
+    <div class="column row">
+      <ul>
+        <li class="complete">Learn ES2015</li>
+        <li class="complete">Learn about Components</li>
+        <li>Learn about state</li>
+      </ul>
+    </div>
 
     <!-- Extract an alert link that takes an alert prop -->
-    <a href="#" onclick="alert('hello')">Alert Link</a>
+    <div class="column row">
+      <a href="#" onclick="alert('hello')">Alert Link</a>
+    </div>
 
     <!-- Extract an Auth Link that takes a user object -->
-    <!-- If it is null -->
-    <p><a href="#">Sign Up</a></p>
+    <div class="column row">
+      <!-- If it is null -->
+      <p><a href="#">Sign Up</a></p>
 
-    <!-- If it is present -->
-    <p><a href="#">Signed In as Jon Snow</a></p>
+      <!-- If it is present -->
+      <p><a href="#">Signed In as Jon Snow</a></p>
+    </div>
 
 
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/what-input/2.1.1/what-input.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
     <script src="/bundle.js"></script>
   </body>
 </html>
